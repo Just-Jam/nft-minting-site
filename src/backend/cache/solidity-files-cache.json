@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\samly\\Solidity Projects\\hardhat-react\\src\\backend\\contracts\\InspiroNFT.sol": {
-      "lastModificationDate": 1648988126078,
-      "contentHash": "473681c3979869fa5963028e122c4984",
+      "lastModificationDate": 1649064084394,
+      "contentHash": "df9c5ee89a8d1e98db98529421514ec2",
       "sourceName": "src/backend/contracts/InspiroNFT.sol",
       "solcConfig": {
         "version": "0.8.4",
