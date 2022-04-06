@@ -1,3 +1,5 @@
+const toWei = (num) => ethers.utils.parseEther(num.toString())
+
 async function main() {
   const [deployer] = await ethers.getSigners();
 
@@ -6,14 +8,11 @@ async function main() {
 
   
   // Get the ContractFactories and Signers here.
-  const NFT = await ethers.getContractFactory("NFT");
-  const Marketplace = await ethers.getContractFactory("Marketplace");
+  const NFT = await ethers.getContractFactory("InspiroNFT");
   // deploy contracts
-  const marketplace = await Marketplace.deploy(1);
-  const nft = await NFT.deploy();
+  const nft = await NFT.deploy("Inspiro NFT", "INSP", "exampleurl/", 100, toWei(10));
   // Save copies of each contracts abi and address to the frontend.
-  saveFrontendFiles(marketplace , "Marketplace");
-  saveFrontendFiles(nft , "NFT");
+  saveFrontendFiles(nft , "InspiroNFT");
 }
 
 function saveFrontendFiles(contract, name) {
